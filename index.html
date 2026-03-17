@@ -2,100 +2,85 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SF Crime: Two Decades of Data</title>
+
   <style>
-    :root {
-      --bg: #1a1a2e;
-      --card: #22243a;
-      --text: #f5f7fa;
-      --muted: #b8c1d1;
-      --accent: #16c79a;
-      --border: rgba(22, 199, 154, 0.18);
-      --shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      font-family: Arial, sans-serif;
+      background: #f4f6fb;
+      color: #1a1a2e;
     }
 
     header {
-      width: 100%;
-      padding: 4rem 1.5rem 3rem;
-      background: linear-gradient(180deg, #202442 0%, #1a1a2e 100%);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .header-inner {
-      max-width: 1100px;
-      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      background: white;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
     }
 
     h1 {
-      margin: 0 0 1rem;
-      font-size: clamp(2rem, 5vw, 3.6rem);
-      line-height: 1.1;
-      color: var(--accent);
-      letter-spacing: 0.02em;
+      margin: 0;
+      font-size: 2.5rem;
+      color: #16c79a;
     }
 
     .intro {
-      max-width: 760px;
-      margin: 0;
-      color: var(--muted);
-      font-size: 1.05rem;
+      max-width: 700px;
+      margin: 1rem auto 0;
+      color: #555;
     }
 
     main {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 2rem 1.5rem 4rem;
+      padding: 2rem 1rem;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.25rem;
+      gap: 1.5rem;
     }
 
     .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.4rem;
-      box-shadow: var(--shadow);
-      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(22, 199, 154, 0.45);
-      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.34);
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
     }
 
     .card h2 {
-      margin: 0 0 0.55rem;
+      margin: 0 0 0.5rem;
       font-size: 1.2rem;
-      color: var(--text);
     }
 
     .card p {
       margin: 0 0 1rem;
-      color: var(--muted);
-      font-size: 0.98rem;
+      color: #555;
+      font-size: 0.95rem;
     }
 
     .card a {
-      color: var(--accent);
       text-decoration: none;
+      color: #16c79a;
       font-weight: bold;
     }
 
@@ -104,81 +89,73 @@
     }
 
     footer {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 1.5rem 2.5rem;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        padding: 3rem 1rem 2.25rem;
-      }
-
-      main {
-        padding: 1.5rem 1rem 3rem;
-      }
-
-      .card {
-        padding: 1.15rem;
-      }
+      text-align: center;
+      padding: 2rem;
+      color: #777;
+      font-size: 0.9rem;
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="header-inner">
-      <h1>SF Crime: Two Decades of Data</h1>
-      <p class="intro">
-        This portfolio explores long-term crime patterns in San Francisco through both static and interactive visualizations.
-        It highlights changes over time, spatial hot spots, and shifts in hourly activity using data science tools and visual storytelling.
-      </p>
-    </div>
-  </header>
 
-  <main>
-    <section class="grid">
-      <article class="card">
+<header>
+  <h1>SF Crime: Two Decades of Data</h1>
+  <p class="intro">
+    This portfolio explores crime patterns in San Francisco using data visualizations.
+    It highlights trends over time, spatial hotspots, and daily activity patterns.
+  </p>
+</header>
+
+<main>
+  <section class="grid">
+
+    <!-- Static -->
+    <div class="card">
+      <img src="Images/yearly_crime_trends.png">
+      <div class="card-content">
         <h2>Yearly Crime Trends</h2>
-        <p>A static overview of how reported crime changed across the years.</p>
-        <a href="Images/yearly_crime_trends.png">Open visualization</a>
-      </article>
+        <p>How crime has changed over time.</p>
+        <a href="Images/yearly_crime_trends.png">View image →</a>
+      </div>
+    </div>
 
-      <article class="card">
-        <h2>Hourly Crime by Year</h2>
-        <p>An interactive chart showing how crime patterns vary by hour over time.</p>
-        <a href="Visualizations/hourly_crime_distributions_by_year.html">Explore chart</a>
-      </article>
+    <!-- Plotly -->
+    <div class="card">
+      <img src="Images/hourly_crime_trends.png">
+      <div class="card-content">
+        <h2>Hourly Crime Patterns</h2>
+        <p>Interactive view of crime by hour.</p>
+        <a href="Visualizations/hourly_crime_distributions_by_year.html">Open chart →</a>
+      </div>
+    </div>
 
-      <article class="card">
-        <h2>SF Crime Heatmap</h2>
-        <p>An interactive map revealing where crime clusters across the city.</p>
-        <a href="Visualizations/sf_crime_heatmap.html">View map</a>
-      </article>
+    <!-- Folium -->
+    <div class="card">
+      <img src="Images/crime_ratio_heatmap.png">
+      <div class="card-content">
+        <h2>Crime Heatmap</h2>
+        <p>Where crime clusters across the city.</p>
+        <a href="Visualizations/sf_crime_heatmap.html">View map →</a>
+      </div>
+    </div>
 
-      <article class="card">
-        <h2>Drug Crime Ratio Map</h2>
-        <p>A focused spatial view of drug-related crime patterns and relative intensity.</p>
-        <a href="Visualizations/ratio_map_drug.html">Open map</a>
-      </article>
-
-      <article class="card">
-        <h2>Hourly Crime Trends Image</h2>
-        <p>A static figure summarizing crime activity across hours of the day.</p>
-        <a href="Images/hourly_crime_trends.png">Open image</a>
-      </article>
-
-      <article class="card">
+    <!-- Extra -->
+    <div class="card">
+      <img src="Images/jitter_plot.png">
+      <div class="card-content">
         <h2>Jitter Plot</h2>
-        <p>A static visualization showing distribution and spread in the crime data.</p>
-        <a href="Images/jitter_plot.png">Open image</a>
-      </article>
-    </section>
-  </main>
+        <p>Distribution of crime observations.</p>
+        <a href="Images/jitter_plot.png">View image →</a>
+      </div>
+    </div>
 
-  <footer>
-    <p>Built as a data science portfolio project on San Francisco crime analysis.</p>
-  </footer>
+  </section>
+</main>
+
+<footer>
+  <p>Data visualization project – San Francisco crime analysis</p>
+</footer>
+
 </body>
 </html>

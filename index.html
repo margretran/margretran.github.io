@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SF Crime: Two Decades of Data</title>
 
   <style>
@@ -14,10 +14,10 @@
     }
 
     header {
-      padding: 3rem 1.5rem;
+      padding: 3rem 1rem;
+      text-align: center;
       background: white;
       border-bottom: 1px solid #ddd;
-      text-align: center;
     }
 
     h1 {
@@ -28,13 +28,13 @@
 
     .intro {
       max-width: 700px;
-      margin: 1rem auto 0;
+      margin: 1rem auto;
       color: #555;
     }
 
     main {
       max-width: 1100px;
-      margin: 0 auto;
+      margin: auto;
       padding: 2rem 1rem;
     }
 
@@ -49,7 +49,7 @@
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: 0.2s;
     }
 
     .card:hover {
@@ -75,7 +75,6 @@
     .card p {
       margin: 0 0 1rem;
       color: #555;
-      font-size: 0.95rem;
     }
 
     .card a {
@@ -92,7 +91,6 @@
       text-align: center;
       padding: 2rem;
       color: #777;
-      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -110,42 +108,46 @@
 <main>
   <section class="grid">
 
-    <!-- Static -->
+    <!-- STATIC -->
     <div class="card">
       <img src="Images/yearly_crime_trends.png">
       <div class="card-content">
         <h2>Yearly Crime Trends</h2>
-        <p>How crime has changed over time.</p>
+        <p>Overview of crime trends over time.</p>
         <a href="Images/yearly_crime_trends.png">View image →</a>
       </div>
     </div>
 
-    <!-- Plotly -->
+    <!-- INTERACTIVE PLOTLY -->
     <div class="card">
       <img src="Images/hourly_crime_trends.png">
       <div class="card-content">
         <h2>Hourly Crime Patterns</h2>
-        <p>Interactive view of crime by hour.</p>
-        <a href="Visualizations/hourly_crime_distributions_by_year.html">Open chart →</a>
+        <p>Interactive chart showing crime distribution across hours.</p>
+        <a href="Visualizations/hourly_crime_distributions_by_year.html">
+          Open interactive chart →
+        </a>
       </div>
     </div>
 
-    <!-- Folium -->
+    <!-- FOLIUM MAP -->
     <div class="card">
       <img src="Images/crime_ratio_heatmap.png">
       <div class="card-content">
         <h2>Crime Heatmap</h2>
-        <p>Where crime clusters across the city.</p>
-        <a href="Visualizations/sf_crime_heatmap.html">View map →</a>
+        <p>Interactive map showing spatial crime density.</p>
+        <a href="Visualizations/sf_crime_heatmap.html">
+          Open interactive map →
+        </a>
       </div>
     </div>
 
-    <!-- Extra -->
+    <!-- EXTRA -->
     <div class="card">
       <img src="Images/jitter_plot.png">
       <div class="card-content">
         <h2>Jitter Plot</h2>
-        <p>Distribution of crime observations.</p>
+        <p>Distribution of crime data points.</p>
         <a href="Images/jitter_plot.png">View image →</a>
       </div>
     </div>
